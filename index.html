@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">Library</div>
+    </header>
+    <div class="add_books">
+      <button class="add_book">Add book</button>
+    </div>
+    <main>
+      <div class="book_details">
+        <div class="book">
+          <div class="book_name">Name</div>
+          <div class="author">Author</div>
+          <div class="buttons">
+            <button class="read">Read</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+
+        <div class="book">
+          <div class="book_name">Name</div>
+          <div class="author">Author</div>
+          <div class="buttons">
+            <button class="read">Read</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <dialog id="overLay" class="over_lay">
+      <form class="book_form">
+        <p>
+          <label for="name">
+            Book Name <input type="text" name="book_name" id="name" required
+          /></label>
+
+          <label for="author">
+            Author Name <input type="text" name="author" id="author" required
+          /></label>
+          <label for="pages">
+            pages
+            <input type="number" name="pages" id="pages" required min="0"
+          /></label>
+
+          <label for="read_status">
+            Read or Not
+            <input type="checkbox" name="read_status" id="read_status"
+          /></label>
+        </p>
+        <div>
+          <button value="cancel" formmethod="dialog" class="cancelBtn">
+            Cancel
+          </button>
+          <button id="addBtn" value="default" class="add">Add</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

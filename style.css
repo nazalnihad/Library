@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #525252;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 25px 0;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .book_details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(257px, 1fr)); /* Arrange books in columns with minimum width of 200px */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 70%;
+    /* padding: 0px; */
+    margin: 10px;
+    box-sizing: border-box;
+    /* grid-auto-rows: minmax(18rem, auto); */
+  }
+  
+  .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    align-items: center;
+    border: 7px solid rgb(255, 230, 0);
+    border-radius: 20px;
+    /* padding: ; */
+    width: 17rem;
+    height: 20rem;
+    margin-bottom: 15px;
+  }
+  
+  .book_name,
+  .author {
+    margin-bottom: 10px;
+    padding-left: 8px;
+
+  }
+  
+  .add_books {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .add_book {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .read{
+    border: none;
+    padding: 10px;
+    font-family:  sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    border-radius: 8px;
+  }
+  .delete  {
+    width:5em; 
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-family:  sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    border-radius: 8px;
+
+  }
+
+  form>p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  input[type="text"]
+{
+    width: 180px;
+    height: 8px;
+    padding: 5px;
+  }
+  input[type="checkbox"] {
+    width: 30px;
+  }
+  input[type="number"]{
+    margin-left: 50px;
+    width: 185px;
+    height: 17px;
+  }
+  #name{
+    margin-left: 10px;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .read{
+    width:5em; 
+    /* background-color: #f44336;  */
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .add_book{
+    padding: 20px;
+    font-family:monospace;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: aliceblue;
+    color: black;
+  }
