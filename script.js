@@ -3,6 +3,7 @@ const form = document.querySelector(".book_form");
 const cancel = document.querySelector(".cancelBtn");
 const add = document.querySelector(".add");
 const deleteBtn = document.querySelector("delete");
+const mainContent = document.querySelector('main');
 
 const myLibrary = [];
 
@@ -48,6 +49,9 @@ function showBooks() {
     authorDiv.className = "author";
     authorDiv.textContent = book.author_name;
 
+    const pagesDiv = document.createElement("div");
+    pagesDiv.textContent = "pages : " + book.no_of_pages;
+
     const buttonsDiv = document.createElement("div");
     buttonsDiv.className = "buttons";
 
@@ -77,6 +81,7 @@ function showBooks() {
 
     bookContainer.appendChild(bookNameDiv);
     bookContainer.appendChild(authorDiv);
+    bookContainer.appendChild(pagesDiv);
     bookContainer.appendChild(buttonsDiv);
 
     bookDetailsContainer.appendChild(bookContainer);
@@ -97,6 +102,7 @@ function closeDialog() {
 }
 
 add_book.addEventListener("click", () => {
+  mainContent.classList.add('blur-background');
   showDialog();
 })
 
@@ -106,6 +112,7 @@ cancel.addEventListener("click", () => {
   document.getElementById("pages").value = "";
   document.getElementById("read_status").checked = false;
   closeDialog();
+  mainContent.classList.remove('blur-background');
 });
 
 
@@ -118,6 +125,7 @@ form.addEventListener("submit", (event) => {
   else {
     addBook();
     closeDialog();
+    mainContent.classList.remove('blur-background');
   }
 });
 

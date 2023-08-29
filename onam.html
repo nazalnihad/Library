@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onam Card Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      #card {
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Onam Card Generator</h1>
+    <div id="card">
+      <!-- Card content will be generated here -->
+    </div>
+    <button id="generateButton">Generate Card</button>
+
+    <script>
+      const colors = ["#FF5733", "#47AB32", "#3498DB", "#F39C12", "#9B59B6"];
+      const greetings = [
+        "Happy Onam!",
+        "Wishing you a joyful Onam!",
+        "May your Onam be filled with happiness!",
+      ];
+      const images = [
+        "image-url-1.jpg",
+        "image-url-2.jpg",
+        "image-url-3.jpg",
+        // Add more image URLs here
+      ];
+
+      const generateRandomIndex = (arrayLength) =>
+        Math.floor(Math.random() * arrayLength);
+
+      const generateCard = () => {
+        const randomColor = colors[generateRandomIndex(colors.length)];
+        const randomGreeting = greetings[generateRandomIndex(greetings.length)];
+        const randomImage = images[generateRandomIndex(images.length)];
+
+        const cardElement = document.getElementById("card");
+        cardElement.style.backgroundColor = randomColor;
+        cardElement.innerHTML = `
+        <h2>${randomGreeting}</h2>
+        <img src="${randomImage}" alt="Onam Image" style="max-width: 100%; height: auto;">
+      `;
+      };
+
+      const generateButton = document.getElementById("generateButton");
+      generateButton.addEventListener("click", generateCard);
+    </script>
+  </body>
+</html>

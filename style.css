@@ -26,7 +26,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(257px, 1fr)); /* Arrange books in columns with minimum width of 200px */
     gap: 40px;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     /* border: 1px solid black; */
     width: 70%;
     /* padding: 0px; */
@@ -44,15 +44,16 @@ body {
     font-size: x-large;
     font-weight: bolder;
     align-items: center;
-    border: 7px solid rgb(255, 230, 0);
+    border: 7px solid #ffe600;
     border-radius: 20px;
     /* padding: ; */
     width: 17rem;
     height: 20rem;
     margin-bottom: 15px;
+    margin-left: 10px;
   }
   
-  .book_name,
+  .book_name,.pages,
   .author {
     margin-bottom: 10px;
     padding-left: 8px;
@@ -99,31 +100,15 @@ body {
     gap: 10px;
     align-items: flex-start;
   }
-  input[type="text"]
-{
-    width: 180px;
-    height: 8px;
-    padding: 5px;
-  }
-  input[type="checkbox"] {
-    width: 30px;
-  }
-  input[type="number"]{
-    margin-left: 50px;
-    width: 185px;
-    height: 17px;
-  }
-  #name{
-    margin-left: 10px;
-  }
+
   .buttons{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    margin-top: 10px;
   }
   .read{
     width:5em; 
-    /* background-color: #f44336;  */
     color: rgb(0, 0, 0);
     border: none;
     padding: 8px;
@@ -139,3 +124,78 @@ body {
     background-color: aliceblue;
     color: black;
   }
+
+.book_form {
+  gap: 10px;
+  padding: 20px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.book_form label #name{
+  margin-left: 20px; 
+
+}
+.book_form label #author {
+  margin-left: 5px; 
+}
+
+.book_form label #pages {
+  margin-left: 75px; 
+  width: 50px;
+  height: 15px;
+}
+.book_form label input[type="text"],
+.book_form label input[type="number"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 17px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif /* Specify font family */
+}
+.book_form label input[type="checkbox"] {
+  margin-left: 78px; 
+  transform: scale(1.75);
+}
+
+.book_form div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.book_form div button{
+  font-size: 1em;
+  font-weight: bold;
+  width: 90px;
+    /* padding: 3px; */
+}
+.cancelBtn{
+  padding: 3px;
+  background-color: #f44336;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+}
+.add{
+  padding: 5px;
+  background-color: #3ab258;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.over_lay{
+  background-color: #000000;
+  border-radius: 10px;
+  border: 2px solid rgba(62, 62, 62, 0.8);
+  color: #ffe600;
+}
+
+/* CSS for the background blur effect */
+.blur-background {
+  filter: blur(8px);
+}
